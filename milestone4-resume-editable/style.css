@@ -1,0 +1,55 @@
+#cv-form{
+    /* display: none; */
+    width: 70%;
+    background-color: rgb(170, 188, 204);
+    border-radius: 4px;
+    border: 4px double rgb(10, 9, 9);   
+   
+}
+
+#cv-template{
+    /* display: none; */
+    width: 90%;
+    background-color: rgb(251, 251, 251);
+    border-radius: 4px;
+    border: 4px double rgb(10, 9, 9);
+    margin-left: 50px;
+    padding-left: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+}
+
+.myimg{
+    /* border: 1px solid #ff0000; */
+    border-radius: 50%;
+    width: 200px;
+}
+
+.background{
+    background-color: rgb(124, 255, 255);
+}
+
+.btn{
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #4481e4;
+    color: #fffcfc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+  
+.btn:hover {
+    background-color: rgb(124, 255, 255);
+    color: black;
+}
+
+@media print {
+    #generateBtn, #printBtn, #editBtn {
+      display: none; /* Hide the buttons during printing */
+    }
+  }

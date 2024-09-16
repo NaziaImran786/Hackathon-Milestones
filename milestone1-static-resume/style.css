@@ -1,0 +1,111 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    margin: 0%;
+    padding: 150px;
+    box-sizing: border-box;
+}
+
+
+.res-container{
+    display: flex;
+    background-color: white;
+    width:80%;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 0 0 80px rgba(20, 11, 11, 0.9);
+
+}
+
+.left-sec{
+    background-color: rgb(62, 102, 99);
+    color: black;
+    padding: 5%;
+    width: 35%;
+    text-align: center;
+    border-right: 5px solid rgb(156, 131, 131);
+    border-radius: 20px;
+}
+.profile-pic{ 
+    width: 200px;
+    height: 150px;
+    margin-top: 10%;
+    border-radius: 50%;
+    border: 5px double rgb(207, 191, 191);
+    margin-bottom: 20px;
+
+    &:hover{
+        box-shadow: 0 0 50px rgb(180, 107, 107);
+    }
+
+}
+h1{
+    font-size: 30px;
+    margin: 10px 0;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    text-align: center;
+
+    &:hover{
+        box-shadow: 0 0 50px rgb(180, 107, 107);
+    }
+}
+
+h3{
+    font-size: 18px;
+    padding: 2%;
+    margin: 20px 0 10px;
+    color:black;
+    font-weight: 700;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgb(208, 171, 171);
+    margin-top: 5%;
+    margin-bottom: 5%;
+
+    &:hover{
+        box-shadow: 0 0 50px rgb(180, 107, 107);
+    }
+}
+
+ul{
+    margin: 5px 0;
+}
+
+ul li:hover{
+    color: blue;
+}
+
+.right-section{
+    padding: 20px;
+    width: 65%;
+}
+
+button{
+    font-family: Arial, sans-serif;
+    border-radius: 10px;
+    box-shadow: 0 0 15px black;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+button:hover{
+    background-color: rgb(49, 168, 146);
+}
+
+#myPic{
+    width: 200px;
+    border-radius: 50%;
+}
+
+.abc{
+    text-align: center;
+    background-color: rgb(49, 168, 146);
+    border-radius: 20px;
+    color: black; 
+
+    &:hover{
+        box-shadow: 0 0 30px rgb(192, 112, 112);
+    }
+   
+}
