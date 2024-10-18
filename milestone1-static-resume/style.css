@@ -10,7 +10,7 @@ body{
 .res-container{
     display: flex;
     background-color: white;
-    width:80%;
+    width:90%;
     margin: 0 auto;
     border-radius: 20px;
     box-shadow: 0 0 80px rgba(20, 11, 11, 0.9);
@@ -18,27 +18,35 @@ body{
 }
 
 .left-sec{
-    background-color: rgb(62, 102, 99);
+    background-color: rgb(98, 175, 170);
     color: black;
     padding: 5%;
     width: 35%;
-    text-align: center;
-    border-right: 5px solid rgb(156, 131, 131);
-    border-radius: 20px;
+    border-right: 2px solid rgb(98, 175, 170); 
+    border-radius: 10px;
+    text-align: left;
 }
+
+.right-section{
+    background-color: white;
+    color: black;
+    padding: 5%;
+    width: 65%;
+    text-align: center; 
+    border-right: 2px solid beige; 
+    border-radius: 10px; 
+    text-align: left;
+}
+
 .profile-pic{ 
-    width: 200px;
+    width: 150px;
     height: 150px;
     margin-top: 10%;
     border-radius: 50%;
-    border: 5px double rgb(207, 191, 191);
+    padding-left: 10%;  
     margin-bottom: 20px;
-
-    &:hover{
-        box-shadow: 0 0 50px rgb(180, 107, 107);
-    }
-
 }
+
 h1{
     font-size: 30px;
     margin: 10px 0;
@@ -56,15 +64,9 @@ h3{
     padding: 2%;
     margin: 20px 0 10px;
     color:black;
-    font-weight: 700;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgb(208, 171, 171);
+    font-weight: 900;    
     margin-top: 5%;
     margin-bottom: 5%;
-
-    &:hover{
-        box-shadow: 0 0 50px rgb(180, 107, 107);
-    }
 }
 
 ul{
@@ -73,11 +75,6 @@ ul{
 
 ul li:hover{
     color: blue;
-}
-
-.right-section{
-    padding: 20px;
-    width: 65%;
 }
 
 button{
@@ -90,7 +87,7 @@ button{
 }
 
 button:hover{
-    background-color: rgb(49, 168, 146);
+    background-color: rgb(98, 175, 170);
 }
 
 #myPic{
@@ -100,7 +97,7 @@ button:hover{
 
 .abc{
     text-align: center;
-    background-color: rgb(49, 168, 146);
+    background-color: rgb(98, 175, 170);
     border-radius: 20px;
     color: black; 
 
@@ -109,3 +106,32 @@ button:hover{
     }
    
 }
+
+#download:hover{
+    background-color: rgb(70, 212, 225);
+    transform: scale(0.9);     
+ 
+ }
+ 
+ @media (max-width: 700px) {
+     .res-container{
+         flex-direction: column;
+     }
+ 
+     .left-sec, .right-section{
+         width: 100%;        
+         text-align: left;
+         min-width: none;
+         overflow-wrap: break-word;
+         overflow-x: hidden;
+     }     
+ }
+ 
+ 
+ @media print {
+     #download {
+       display: none; /* Hide the buttons during printing */
+     }
+   }
+ 
+
