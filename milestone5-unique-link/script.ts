@@ -1,7 +1,6 @@
-
 // alert("loading")
 
- //----------------------------------------------- Adding new field in work experience
+ //------------------------------------------function Adding new field in work experience-------------------------
 function addNewWEField() {
   let newNode = document.createElement("textarea");
   newNode.classList.add("form-control");
@@ -16,8 +15,7 @@ function addNewWEField() {
   weOb!.insertBefore(newNode, weAddButtonOb);
 }
 
-// ---------------------------------------------Adding new field in academic Qualification
-
+// -------------------------------------function Adding new field in academic Qualification------------------------
 function addNewAQField() {
   let newNode = document.createElement("textarea");
   newNode.classList.add("form-control");
@@ -32,41 +30,45 @@ function addNewAQField() {
   aqOb!.insertBefore(newNode, aqAddButtonOb);
 }
 
-//-------------------------------------------------------------generate resume
+//---------------------------------------------------function generate resume------------------------------------
 
 function generateResume() {
-
+ //---------------------------------------------------------in variable name get --------------------------------
 
   let name = document.getElementById("nameField")!.value;
 
   let nameT1 = document.getElementById("nameT1");
 
   nameT1!.innerHTML = name;
-//--------------------------------------------------------------------------direct
-//---------------------------------------------------------------------------name
+
+//--------------------------------------------------------------------------direct name get----------------------
  document.getElementById("nameT2")!.innerHTML = name;
 
-//-------------------------------------------------------------------------contact
+//-------------------------------------------------------------------------contact-------------------------------
   document.getElementById("contactT")!.innerHTML =
   document.getElementById("contactField")!.value;
 
-//------------------------------------------------------------------------address
+//------------------------------------------------------------------------address--------------------------------
   document.getElementById("addressT")!.innerHTML =
   document.getElementById("addressField")!.value;
 
-//----------------------------------------------------------------------- linkedIn-
+//----------------------------------------------------------------------- linkedIn------------------------------
   document.getElementById("linkT")!.innerHTML =
   document.getElementById("linkedinField")!.value;
 
-//-----------------------------------------------------------------------facebook
+//-----------------------------------------------------------------------facebook-------------------------------
   document.getElementById("fbT")!.innerHTML =
   document.getElementById("fbField")!.value;
 
-//------------------------------------------------------------------------objective
+  // /------------------------------------------------------------------------github------------------------------
+  document.getElementById("githubT")!.innerHTML =
+  document.getElementById("githubField")!.value;
+
+//------------------------------------------------------------------------objective------------------------------
   document.getElementById("objectiveT")!.innerHTML =
   document.getElementById("objectiveField")!.value;
 
-//-------------------------------------------------------------------work experience
+//-------------------------------------------------------------------work experience----------------------------
   let we = document.getElementsByClassName("weField");
 
   let str = "";
@@ -77,7 +79,7 @@ function generateResume() {
 
   document.getElementById("weT")!.innerHTML = str;
 
-//-------------------------------------------------------------academic Qualification
+//-------------------------------------------------------------academic Qualification------------------------------
   let aqs = document.getElementsByClassName("eqField");
 
   let str1 = "";
@@ -87,7 +89,7 @@ function generateResume() {
   }
  document.getElementById("aqT")!.innerHTML = str1;
 
-//-----------------------------------------------------------------code for setting image
+//-----------------------------------------------------------------code for setting image--------------------------
 
   let file = document.getElementById("imgField")!.files[0];
 
@@ -99,7 +101,7 @@ function generateResume() {
 
   // console.log(reader.result);
 
-//----------------------------------------------------------------set the image to template
+//----------------------------------------------------------------set the image to template------------------------
 
   reader.onloadend = function () {
     document.getElementById("imgTemplate")!.src = reader.result;
@@ -113,25 +115,31 @@ function generateResume() {
   const baseUrl = 'http://127.0.0.1:5501/index.html'; // Your Vercel deployment URL
   const uniqueResumeUrl = `${baseUrl}?/${username}`; // Create unique URL      
 
-//-----------------------------------------------------------Set the resume link in the DOM
+//-----------------------------------------------------------Set the resume link in the DOM--------------------------
   const resumeLink = document.getElementById('resumeLink') as HTMLAnchorElement;
   resumeLink.setAttribute('href', uniqueResumeUrl);
   resumeLink.textContent = uniqueResumeUrl;
 
-//------------------------------------------------------Copy link to clipboard functionality
+//------------------------------------------------------Copy link to clipboard functionality------------------------
   document.getElementById('copyLinkBtn')!.addEventListener('click', () => {
   navigator.clipboard.writeText(uniqueResumeUrl).then(() => {
     alert('Resume link copied to clipboard!');
   })
-  });
-  
-}
-//---------------------------------------------------------------- print resume
-function printResume() {
-  window.print();
+  });  
 }
 
-// ----------------------------------------------------------------resume editing
+//---------------------------------------------------------------- print resume------------------------------------
+function printResume() {
+  const form = document.getElementById("cv-form")
+  const editBtn = document.getElementById("editBtn")
+  form!.style.display = "none";
+  if(editBtn)editBtn!.style.display = "none"
+  window.print();
+  form!.style.display ="block";
+  if(editBtn)editBtn!.style.display = "block"  
+}
+
+// ----------------------------------------------------------------resume editing------------------------------------
 function editResume() {
   let editBtn = document.getElementById("editBtn");
   editBtn!.style.display = editBtn!.style.display === "none" ? "block" : "none";
